@@ -98,7 +98,7 @@ class Ui_IRCClient(QtCore.QObject):
         IRCClient.setTabOrder(self.nickname, self.submit)
 
     def retranslateUi(self, IRCClient):
-        IRCClient.setWindowTitle(QtGui.QApplication.translate("IRCClient", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
+        IRCClient.setWindowTitle(QtGui.QApplication.translate("IRCClient", "Simple IRC Client", None, QtGui.QApplication.UnicodeUTF8))
         self.submit.setText(QtGui.QApplication.translate("IRCClient", "Connect", None, QtGui.QApplication.UnicodeUTF8))
         self.server_label.setText(QtGui.QApplication.translate("IRCClient", "Server", None, QtGui.QApplication.UnicodeUTF8))
         self.port_label.setText(QtGui.QApplication.translate("IRCClient", "Port", None, QtGui.QApplication.UnicodeUTF8))
@@ -127,21 +127,11 @@ class Ui_IRCClient(QtCore.QObject):
         self.objThread.start()
         self.emit(QtCore.SIGNAL("show_chat"))
         self.window.hide()
-#    def test(self):
-#        print "testghhhhhhhhhhhhhhhhhhhhh"
+
 
     def show(self):
         self.window.show()
     def hide(self):
         self.window.hide()
 
-
-#if __name__ == "__main__":
-#    import sys
-#    app = QtGui.QApplication(sys.argv)
-#    IRCClient = QtGui.QMainWindow()
-#    ui = Ui_IRCClient()
-#    ui.setupUi(IRCClient)
-#    IRCClient.show()
-#    sys.exit(app.exec_())
 
